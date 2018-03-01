@@ -16,7 +16,7 @@ from vnpy.trader.gateway.ctpGateway.vnctptd import TdApi
 
 from vnpy.trader.vtConstant import  *
 from vnpy.trader.vtGateway import *
-from vnpy.trader.gateway.ctpGateway.language import text
+from vnpy.trader.gateway.ctpGateway.language.chinese import text
 from vnpy.trader.gateway.ctpGateway.ctpDataType import *
 from vnpy.trader.vtFunction import getJsonPath
 
@@ -145,8 +145,8 @@ class CtpGateway(VtGateway):
         # 创建行情和交易接口对象
         self.writeLog(u'连接行情服务器')
         self.mdApi.connect(userID, password, brokerID, mdAddress)
-        self.writeLog(u'连接交易服务器')
-        self.tdApi.connect(userID, password, brokerID, tdAddress, authCode, userProductInfo)
+        # self.writeLog(u'连接交易服务器')
+        # self.tdApi.connect(userID, password, brokerID, tdAddress, authCode, userProductInfo)
         self.setQryEnabled(True)
         # 初始化并启动查询
         self.initQuery()

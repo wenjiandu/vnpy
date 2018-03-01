@@ -20,6 +20,7 @@ pip install -r requirements.txt
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --set show_channel_urls yes
 conda install -c quantopian ta-lib=0.4.9
+conta install pyqt
 
 #Install vn.py
 #python setup.py install
